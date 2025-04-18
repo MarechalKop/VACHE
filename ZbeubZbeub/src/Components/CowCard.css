@@ -1,0 +1,106 @@
+#cow-card {
+  width: 100%;
+  height: auto; /* Auto height au lieu de fixe pour s'adapter au contenu */
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+#cow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+#cow-picture {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+#cow-card:hover #cow-picture {
+  transform: scale(1.05);
+}
+
+#cow-description {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#cow-description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-color: rgba(126, 161, 114, 0.3);
+}
+
+#cow-description h3 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  color: #3d3d3d;
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+}
+
+.cow-description-line {
+  color: #666;
+  font-size: 13px;
+  margin: 4px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Cache la ligne si pas de contenu après les deux points */
+.cow-description-line:empty,
+.cow-description-line:has(+ :empty) {
+  display: none;
+}
+
+.cow-description-line strong {
+  font-weight: 600;
+  color: #7ea172;
+  margin-right: 5px;
+  min-width: 50px;
+}
+
+.classification-badge {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.milk {
+  background-color: #7ea172; /* Vert */
+}
+
+.meat {
+  background-color: #e3b587; /* Beige */
+}
+
+.mixed {
+  background-color: #b38ea6; /* Lavande */
+}
+
+.utility {
+  background-color: #6b7db3; /* Bleu */
+}

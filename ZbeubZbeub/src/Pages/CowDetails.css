@@ -1,0 +1,168 @@
+.cow-details-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cow-details-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.cow-image-container {
+  position: relative;
+  height: 450px; /* Hauteur augmentée pour mieux voir la vache */
+  overflow: hidden;
+}
+
+.cow-details-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from 'cover' to 'contain' */
+  background-color: #f6f6f2; /* Fond clair pour les images */
+}
+
+.cow-name-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 40px 20px 20px;
+}
+
+.cow-name-banner h2 {
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif; /* Police sans serif */
+}
+
+.cow-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 25px;
+}
+
+.cow-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* N'affiche que si la valeur existe */
+.cow-info-item:empty {
+  display: none;
+}
+
+.cow-info-label {
+  font-size: 0.9rem;
+  color: #7ea172;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "Arial", sans-serif; /* Police sans serif */
+}
+
+.cow-info-value {
+  font-size: 1.1rem;
+  color: #3d3d3d;
+  font-family: "Arial", sans-serif; /* Police sans serif */
+}
+
+.haiku-section {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  text-align: center;
+}
+
+.haiku-section h3 {
+  color: #7ea172;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-family: "Arial", sans-serif; /* Police sans serif */
+}
+
+.haiku-content {
+  font-family: "Arial", sans-serif; /* Police sans serif */
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #3d3d3d;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.haiku-content::before,
+.haiku-content::after {
+  content: '"';
+  font-size: 3rem;
+  color: rgba(126, 161, 114, 0.2);
+  position: absolute;
+}
+
+.haiku-content::before {
+  top: -10px;
+  left: 0;
+}
+
+.haiku-content::after {
+  bottom: -30px;
+  right: 0;
+}
+
+.haiku-line {
+  margin-bottom: 10px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 2px solid #7ea172;
+  border-radius: 8px;
+  color: #7ea172;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: "Arial", sans-serif; /* Police sans serif */
+}
+
+.back-button:hover {
+  background-color: #7ea172;
+  color: white;
+}
+
+.back-button::before {
+  content: "←";
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .cow-image-container {
+    height: 300px;
+  }
+
+  .cow-name-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .haiku-content {
+    font-size: 1.2rem;
+  }
+}
