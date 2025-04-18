@@ -1,6 +1,6 @@
 #cow-card {
   width: 100%;
-  height: auto; /* Auto height au lieu de fixe pour s'adapter au contenu */
+  height: auto;
   min-height: 320px;
   display: flex;
   flex-direction: column;
